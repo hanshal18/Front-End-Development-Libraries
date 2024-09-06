@@ -7,3 +7,6 @@ In the Front End Development Libraries Certification, you'll learn how to style 
 Later, you'll build a shopping cart and other applications to learn how to create powerful Single Page Applications (SPAs) with React and Redux.
 
 - 📫 How to reach me hanshal18@hotmail.com
+
+### projects
+- [random quote machine](https://hanshal18-random-quote-machine.netlify.app/)
