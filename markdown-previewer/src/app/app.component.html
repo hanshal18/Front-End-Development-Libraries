@@ -1,7 +1,7 @@
-<main class="grid grid-cols-2 gap-4">
-  <textarea class="h-screen overflow-auto" name="markdownBox" id="editor" [(ngModel)]="markdownBox"
+<main class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <textarea class="h-halfscreen md:h-screen overflow-auto" name="markdownBox" id="editor" [(ngModel)]="markdownBox"
     (input)="convertToMD()"></textarea>
-  <div class="h-screen bg-white text-black overflow-auto" id="preview">
+  <div class="h-halfscreen md:h-screen bg-white text-black overflow-auto" id="preview">
     <h1 id="hellow-world">Hellow World</h1>
     <h2 id="welcome-to-markdown-previewer">Welcome to Markdown Previewer</h2>
     <h3 id="created-by-hanshal18">created by hanshal18</h3>
