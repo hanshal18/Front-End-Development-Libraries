@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../environment/environment';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,7 @@ export class AppComponent {
   async newquote() {
     const res:any = await this.http.get('https://api.api-ninjas.com/v1/quotes',{
       headers:{
-        "X-Api-Key":"HL6AtL6TOF9OtE88A6PRdQ==yuW3GuPYX1B0AVHu",
+        "X-Api-Key":environment.apiKey,
       }
     }).subscribe((res: any) => {
       this.quoteText = res[0].quote
