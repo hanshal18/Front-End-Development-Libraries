@@ -17,10 +17,14 @@ export class AppComponent {
   quoteAuthor = `Zig Ziglar`
   quoteLink = `https://x.com/intent/post?via=hanshal_18&hashtags=quotes&related=freecodecamp&text="${this.quoteText}"+${this.quoteAuthor}`
   async newquote() {
-    const res = await this.http.get('https://api.quotable.io/quotes/random?limit=1&maxLength=230').subscribe((res: any) => {
-      this.quoteText = res[0].content
+    const res:any = await this.http.get('https://api.api-ninjas.com/v1/quotes',{
+      headers:{
+        "X-Api-Key":"HL6AtL6TOF9OtE88A6PRdQ==yuW3GuPYX1B0AVHu",
+      }
+    }).subscribe((res: any) => {
+      this.quoteText = res[0].quote
       this.quoteAuthor = res[0].author
-      this.quoteLink = `https://x.com/intent/post?via=hanshal_18&hashtags=quotes&related=freecodecamp&text="${res[0].content}"+${res[0].author}`
+      this.quoteLink = `https://x.com/intent/post?via=hanshal_18&hashtags=quotes&related=freecodecamp&text="${res[0].quote}"+${res[0].author}`
     })
   }
   title = 'random quote machine';
