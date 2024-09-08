@@ -1,0 +1,25 @@
+<main class="w-full h-screen flex justify-center items-center">
+  <div>
+    <span class="flex justify-end text-3xl w-full overflow-x-auto" id="display"></span>
+    <div class="grid grid-cols-4 gap-4">
+      <button type="button" class="btn" id="clear" (click)="display('clear')">AC</button>
+      <button type="button" class="btn" id="DE" (click)="display('delete')">DE</button>
+      <button type="button" class="btn" id="decimal" (click)="display('.')">.</button>
+      <button type="button" class="btn" id="divide" (click)="display('devide')">/</button>
+      <button type="button" class="btn" id="seven" (click)="display(7)">7</button>
+      <button type="button" class="btn" id="eight" (click)="display(8)">8</button>
+      <button type="button" class="btn" id="nine" (click)="display(9)">9</button>
+      <button type="button" class="btn" id="multiply" (click)="display('multiply')">*</button>
+      <button type="button" class="btn" id="four" (click)="display(4)">4</button>
+      <button type="button" class="btn" id="five" (click)="display(5)">5</button>
+      <button type="button" class="btn" id="six" (click)="display(6)">6</button>
+      <button type="button" class="btn" id="subtract" (click)="display('subtract')">-</button>
+      <button type="button" class="btn" id="one" (click)="display(1)">1</button>
+      <button type="button" class="btn" id="two" (click)="display(2)">2</button>
+      <button type="button" class="btn" id="three" (click)="display(3)">3</button>
+      <button type="button" class="btn" id="add" (click)="display('add')">+</button>
+      <button type="button" class="btn col-span-2" id="zero" (click)="display(0)">0</button>
+      <button type="button" class="btn col-span-2" id="equals" (click)="calcu()">=</button>
+      </div>
+  </div>
+</main>
