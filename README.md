@@ -11,3 +11,4 @@ Later, you'll build a shopping cart and other applications to learn how to creat
 ### projects
 - [random quote machine](https://hanshal18-random-quote-machine.netlify.app/)
 - [markdown previewer](https://hanshal18-markdown-previewer.netlify.app/)
+- [drum machine](https://hanshal18-drum-machine.netlify.app)
