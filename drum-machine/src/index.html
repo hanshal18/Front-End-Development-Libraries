@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Drum Machine</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>
+
+<script>
+  window.addEventListener('keydown', (e)=>{
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
+    const key = document.querySelector(`.drum-pad[data-key="${e.keyCode}"]`)
+    if (!audio) return;
+    audio.play();
+    key.classList.add('shadow-slate-700')
+    key.classList.add('shadow-lg')
+});
+  window.addEventListener('keyup', (e)=>{
+    const key = document.querySelector(`.drum-pad[data-key="${e.keyCode}"]`)
+    if(!key) return;
+    key.classList.remove('shadow-slate-700')
+    key.classList.remove('shadow-lg')
+  })
+</script>

@@ -1,0 +1,59 @@
+<main class="w-full h-screen flex justify-center items-center" id="drum-machine">
+  <div class="grid grid-col-1 md:grid-cols-8 gap-4">
+    <div class="md:col-span-4">
+      <div class="grid grid-cols-3 gap-4">
+        <div data-key="81" class="btn rounded drum-pad active:shadow-lg active:shadow-slate-700" (click)="drumBtn(81)" id="drumQ">
+          <kbd>Q</kbd>
+          <audio data-key="81" src="./Heater-1.mp3"></audio>
+        </div>
+        <div data-key="87" class="btn rounded drum-pad active:shadow-lg active:shadow-slate-700" (click)="drumBtn(87)" id="drumW">
+          <kbd>W</kbd>
+          <audio data-key="87" src="./Heater-2.mp3"></audio>
+        </div>
+        <div data-key="69" class="btn rounded drum-pad active:shadow-lg active:shadow-slate-700" (click)="drumBtn(69)" id="drumE">
+          <kbd>E</kbd>
+          <audio data-key="69" src="./Heater-3.mp3"></audio>
+        </div>
+        <div data-key="65" class="btn rounded drum-pad active:shadow-lg active:shadow-slate-700" (click)="drumBtn(65)" id="drumA">
+          <kbd>A</kbd>
+          <audio data-key="65" src="./Heater-4_1.mp3"></audio>
+        </div>
+        <div data-key="83" class="btn rounded drum-pad active:shadow-lg active:shadow-slate-700" (click)="drumBtn(83)" id="drumS">
+          <kbd>S</kbd>
+          <audio data-key="83" src="./Heater-6.mp3"></audio>
+        </div>
+        <div data-key="68" class="btn rounded drum-pad active:shadow-lg active:shadow-slate-700" (click)="drumBtn(68)" id="drumD">
+          <kbd>D</kbd>
+          <audio data-key="68" src="./Dsc_Oh.mp3"></audio>
+        </div>
+        <div data-key="90" class="btn rounded drum-pad active:shadow-lg active:shadow-slate-700" (click)="drumBtn(90)" id="drumZ">
+          <kbd>Z</kbd>
+          <audio data-key="90" src="./Kick_n_Hat.mp3"></audio>
+        </div>
+        <div data-key="88" class="btn rounded drum-pad active:shadow-lg active:shadow-slate-700" (click)="drumBtn(88)" id="drumX">
+          <kbd>X</kbd>
+          <audio data-key="88" src="./RP4_KICK_1.mp3"></audio>
+        </div>
+        <div data-key="67" class="btn rounded drum-pad active:shadow-lg active:shadow-slate-700" (click)="drumBtn(67)" id="drumC">
+          <kbd>C</kbd>
+          <audio data-key="67" src="./Cev_H2.mp3"></audio>
+        </div>
+      </div>
+    </div>
+    <div class="md:col-span-4 w-full h-100 flex justify-center items-center" id="display">
+
+    </div>
+  </div>
+</main>
+
+
+<a href="https://github.com/hanshal18/Front-End-Development-Libraries/tree/main/drum-machine" target="_blank"
+  rel="noopener noreferrer" class="p-1.5 bg-zinc-700 text-white fixed  top-2 right-2 rounded cursor-pointer"><img
+    src="./github.png" alt="github logo"></a>
+
+<footer class="w-full fixed bottom-5 flex justify-center items-center">
+  <p class="p-1 bg-black rounded">crafted with ❤️ by <a href="http://github.com/hanshal18" target="_blank"
+      rel="noopener noreferrer" class="text-white">hanshal18</a> as <a href="https://www.freecodecamp.org/hanshal18"
+      target="_blank" rel="noopener noreferrer" class="text-white">freecodecamp project </a></p>
+</footer>
+
