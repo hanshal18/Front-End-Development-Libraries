@@ -18,6 +18,15 @@
     const key = document.querySelector(`.drum-pad[data-key="${e.keyCode}"]`)
     if (!audio) return;
     audio.play();
+    if(String(e.keyCode)==="81") display.innerHTML="Heater-1"
+    if(String(e.keyCode)==="87") display.innerHTML="Heater-2"
+    if(String(e.keyCode)==="69") display.innerHTML="Heater-3"
+    if(String(e.keyCode)==="65") display.innerHTML="Heater-4"
+    if(String(e.keyCode)==="83") display.innerHTML="Calp"
+    if(String(e.keyCode)==="68") display.innerHTML="Open-HH"
+    if(String(e.keyCode)==="90") display.innerHTML="Kick-n'-hat"
+    if(String(e.keyCode)==="88") display.innerHTML="Kick"
+    if(String(e.keyCode)==="67") display.innerHTML="Closed-HH"
     key.classList.add('shadow-slate-700')
     key.classList.add('shadow-lg')
 });
