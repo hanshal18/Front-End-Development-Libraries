@@ -1,0 +1,30 @@
+<main id="" class="w-full h-screen flex justify-center items-center">
+    <div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="grid grid-cols-3 gap-4 bg-stone-900 p-1 rounded">
+                <span class="col-span-3 text-lg flex justify-center items-center" id="break-label">Break Time</span>
+                <div class="flex justify-center items-center col-span-3">
+                    <button id="break-decrement" class="btn flex justify-center items-center bg-stone-500 mx-2 rounded-full" (click)="change('-','break')"><img src="./down-arrow.png" alt="decreasement"/></button>
+                    <input type="number" name="breaktimer" id="break-length" value="5" class="flex justify-center items-center text-center text-2xl" disabled/>
+                    <button id="break-increment" class="btn flex justify-center items-center bg-stone-500 mx-2 rounded-full" (click)="change('+','break')"><img src="./up-arrow.png" alt="increment"/></button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-stone-900 p-1 rounded">
+                <span class="col-span-3 text-lg flex justify-center items-center" id="session-label">Session Time</span>
+                <div class="flex justify-center items-center col-span-3">
+                    <button id="session-decrement" class="btn flex justify-center items-center bg-stone-500 mx-2 rounded-full" (click)="change('-','session')"><img src="./down-arrow.png" alt="decreasement"/></button>
+                    <input type="number" name="sessiontimer" id="session-length" value="25" class="text-center text-2xl" disabled/>
+                    <button id="session-increment" class="btn flex justify-center items-center bg-stone-500 mx-2 rounded-full" (click)="change('+','session')"><img src="./up-arrow.png" alt="increment"/></button>
+                </div>
+            </div>
+        </div>
+        <div class="my-4 my-4 bg-stone-800">
+            <div class="flex w-full mb-3 justify-center items-center text-5xl md:text-6xl lg:text-7xl" id="timer-label">Session</div>
+            <div class="flex w-full md:w-5/12  rounded my-4 mx-auto justify-center items-center text-7xl md:text-8xl lg:text-9xl bg-stone-900" id="timer-left">25:00</div>
+            <div class="flex justify-center items-center">
+                <button type="button" class="btn bg-stone-500 m-2 rounded" id="start_stop" (click)="runTimer()" ><img src="./play.png" alt="play"></button>
+                <button type="button" class="btn bg-stone-500 m-2 rounded" id="reset" (click)="reset()"><img src="./restart.png" alt="reset"></button>
+            </div>
+        </div>
+    </div>
+</main>
