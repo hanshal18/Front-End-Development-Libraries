@@ -5,7 +5,7 @@
                 <span class="col-span-3 text-lg flex justify-center items-center" id="break-label">Break Time</span>
                 <div class="flex justify-center items-center col-span-3">
                     <button id="break-decrement" class="btn flex justify-center items-center bg-stone-500 mx-2 rounded-full" (click)="change('-','break')"><img src="./down-arrow.png" alt="decreasement"/></button>
-                    <input type="number" name="breaktimer" id="break-length" value="5" class="flex justify-center items-center text-center text-2xl" disabled/>
+                    <input type="number" name="breaktimer" id="break-length" [(ngModel)]="breakLength" class="flex justify-center items-center text-center text-2xl" disabled/>
                     <button id="break-increment" class="btn flex justify-center items-center bg-stone-500 mx-2 rounded-full" (click)="change('+','break')"><img src="./up-arrow.png" alt="increment"/></button>
                 </div>
             </div>
@@ -13,14 +13,14 @@
                 <span class="col-span-3 text-lg flex justify-center items-center" id="session-label">Session Time</span>
                 <div class="flex justify-center items-center col-span-3">
                     <button id="session-decrement" class="btn flex justify-center items-center bg-stone-500 mx-2 rounded-full" (click)="change('-','session')"><img src="./down-arrow.png" alt="decreasement"/></button>
-                    <input type="number" name="sessiontimer" id="session-length" value="25" class="text-center text-2xl" disabled/>
+                    <input type="number" name="sessiontimer" id="session-length" [(ngModel)]="sessionLength" class="text-center text-2xl" disabled/>
                     <button id="session-increment" class="btn flex justify-center items-center bg-stone-500 mx-2 rounded-full" (click)="change('+','session')"><img src="./up-arrow.png" alt="increment"/></button>
                 </div>
             </div>
         </div>
         <div class="my-4 my-4 bg-stone-800">
-            <div class="flex w-full mb-3 justify-center items-center text-5xl md:text-6xl lg:text-7xl" id="timer-label">Session</div>
-            <div class="flex w-full md:w-5/12  rounded my-4 mx-auto justify-center items-center text-7xl md:text-8xl lg:text-9xl bg-stone-900" id="timer-left">25:00</div>
+            <div class="flex w-full mb-3 justify-center items-center text-5xl md:text-6xl lg:text-7xl" id="timer-label">{{whatsrunning}}</div>
+            <div class="flex w-full md:w-5/12  rounded my-4 mx-auto justify-center items-center text-7xl md:text-8xl lg:text-9xl bg-stone-900" id="timer-left">{{whatsrunning=='session'? sessionLength : breakLength}}:00</div>
             <div class="flex justify-center items-center">
                 <button type="button" class="btn bg-stone-500 m-2 rounded" id="start_stop" (click)="runTimer()" ><img src="./play.png" alt="play"></button>
                 <button type="button" class="btn bg-stone-500 m-2 rounded" id="reset" (click)="reset()"><img src="./restart.png" alt="reset"></button>
@@ -28,3 +28,13 @@
         </div>
     </div>
 </main>
+<a href="https://github.com/hanshal18/Front-End-Development-Libraries/tree/main/pomodoro-timer" target="_blank"
+  rel="noopener noreferrer" class="p-1.5 bg-zinc-700 text-white fixed  top-2 right-2 rounded cursor-pointer"><img
+    src="./github.png" alt="github logo"></a>
+
+<footer class="w-full fixed bottom-5 flex justify-center items-center">
+  <p class="p-1 bg-black rounded">crafted with ❤️ by <a href="http://github.com/hanshal18" target="_blank"
+      rel="noopener noreferrer" class="text-white">hanshal18</a> as <a href="https://www.freecodecamp.org/hanshal18"
+      target="_blank" rel="noopener noreferrer" class="text-white">freecodecamp project </a></p>
+</footer>
+<audio src="./clap.mp3" id="beep"></audio>
